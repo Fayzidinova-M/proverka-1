@@ -246,3 +246,29 @@ console.log(powOfT(5));
 
 const toPowerArrow=(num3, n)=>num3**n;
 console.log(toPowerArrow(2,3));
+//условия в функциях
+function canAccesWebSite(age){
+    if(age <18){
+        return false;
+    }
+    return true;
+}
+console.log(canAccesWebSite(16));
+
+//функции в функциях
+const kG_In_USD=7;
+const kM_In_USD=5;
+function calculateW(present){
+    return present*kG_In_USD;
+} 
+function calculateKm(distance){
+    return distance*kM_In_USD;
+} 
+
+function getExchangePrice(present1,present2,distance){
+const price1=calculateW(present1);
+const price2=calculateW(present2);
+const distancePrice=calculateKm(distance);
+return price1+price2+distancePrice;
+ }
+ console.log(getExchangePrice(1,2,10))
