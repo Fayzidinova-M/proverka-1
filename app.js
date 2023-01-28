@@ -142,3 +142,79 @@ console.log(`системный файл ${isAdmin && canWrite}`);
 агар мо ба чои ин аломати  || гузорим шарти ё(аломати кулула дарнаш плюс(магнит)) ро кабул мекунад
  агар мо инкор мекараги бошим пеш аз номи оператор аломати ! гузоштанамо дакор.
 */
+
+
+console. log ('vasya' || 'oleg');//vasya
+console.log(false ||'oleg');//oleg
+console.log('vasya'||false);//vasya
+console.log(false||false);//false
+
+console.log('vasya'&&'oleg');//oleg
+console.log('vasya'&&false);//false
+console.log(false &&'oleg');//false
+console.log(false && false);//false
+
+const isAdmin1=false;
+const fileName=isAdmin1&&'fale.mp4';
+console.log(fileName)
+/*
+хаминчанда изадмин фолс (0) баробар
+хамунба номи файл чоп намешад агар вай 
+кимматаш тру(1)  бошад номи файли файл.мр4
+чоп мешад.
+*/
+
+
+/*
+бо аломати ?? хайки ин аломат агар мо
+ё null ё дига киммат мегуфтаги бошим 
+бачои дута хати рост || хамин дута
+аломати савола ?? менависим
+*/
+
+
+
+
+
+/*
+пользователь хочет приобрести игру в магазине.
+он может это сделать только если:
+-его баланс больше 100(balance)
+или число бонусов больше 100(bonusBalance)
+-он не забонен(isBanned)
+-игра не куплена(isExist)
+-игра в продаже(isSelling)
+напишите условиедля покупки и выведите в консоль
+результат.
+*/
+
+const balance1=1052;
+const bonusBalance=90;
+const isBanned=false;
+const isExist=false;
+const isSelling=true;
+const otvet=(balance1>1000 || bonusBalance>100)
+      && !isBanned
+      && !isExist
+      && isSelling;
+console.log(`могу купить: ${otvet ? 'Да':"Hem"}`);//da
+
+
+
+//ФУНКЦИИ
+ function logName(name,surename){
+    console.log(`моё имя  ${name} ${surename}`);
+ }
+
+ logName('Anton','Larichev');
+
+ function countDepozitSum(depozitInUSD, month, rate){
+    const sum=depozitInUSD*(1+rate/12)**month;
+    return sum;
+ }
+
+ const  example1=countDepozitSum(1000,24,0.12);
+ console.log(example1);
+
+ const  example2=countDepozitSum(10785,24,0.12);
+ console.log(example2);
