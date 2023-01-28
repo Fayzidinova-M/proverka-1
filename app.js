@@ -218,3 +218,20 @@ console.log(`могу купить: ${otvet ? 'Да':"Hem"}`);//da
 
  const  example2=countDepozitSum(10785,24,0.12);
  console.log(example2);
+
+ //Анонимные функции
+ function powerOfTwo(num1){
+    return num1*num1;
+ }
+ console.log(powerOfTwo(5));
+
+ const poft=function(num1){
+return num1*num1;
+ }
+ console.log(6);
+
+//ика дарко нею аку хай хамтиношам 
+
+//Стрелочные функции
+const powOfT=(num2)=>num2*num2;
+console.log(powOfT(5));
