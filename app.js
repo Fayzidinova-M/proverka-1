@@ -1,24 +1,40 @@
-let i=Number;
-let tasks=new Array();//тарзи эълонкунии МАССИВ
-for (i=0;i<=10;i++){
-    tasks[i]='задача '+i;
-    console.log(tasks[i]);
+let i=1;
+while (i<=5){
+    console.log(`вывод ${i}`);
+    i++
 }
-console.log('.........');
-for (i=0;i<=10;i++){
-    if (tasks[i]==='задача 2'){
-        continue;
-    }
-    console.log(tasks[i]);
+//Тарзи навишти WHILE^|^
+const arr=[1,4,8,7]
+
+
+for(let element of arr){
+    console.log(element);
 }
-console.log('.........');
-for (i=0;i<=10;i++){
-    if (tasks[i]==='задача 2'){
-        break;
-    }
-    console.log(tasks[i]);
+for(let element1 in arr){
+    console.log(element1);
 }
-//Фарки байни континю кати брик-а беннн
-//континю хамуншартанги катора пафта давомаша кор кар
-//брик шартба рафта а сикл бурумад888
-//888888888888888888888
+
+
+
+function plus(a,b){
+return a+b;
+}
+function minus(a,b){
+    return a-b;
+}
+function power(a,b){
+    return a**b;
+}
+// функции высшего порядка
+
+function calculate(a,b,fn){
+    console.log(fn.name);
+    const res=fn(a,b);
+    return res;
+}
+let res=calculate(2,3, plus);
+console.log(res);
+res=calculate(2,3, minus);
+console.log(res);
+res=calculate(2,3, power);
+console.log(res);
